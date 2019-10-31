@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Input from './Input'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import CustomInput from './CustomInput'
+import CustomizedSlider from "./MaterialUi";
+
+function App(props) {
+    const [state, setState] = useState({
+        value: 0,
+    })
+    return (
+        <div className="App">
+            <h1>Range Sample</h1>
+            {/*<Input/>*/}
+
+            <CustomInput />
+
+            <div>
+                {/*<CustomizedSlider/>*/}
+
+
+            </div>
+        </div>
+    );
 }
 
 export default App;
