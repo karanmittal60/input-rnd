@@ -5,23 +5,33 @@ import Input from './Input'
 
 import CustomInput from './CustomInput'
 import CustomizedSlider from "./MaterialUi";
+import ReactSliderWithValueBubble from "./Components/ReactSliderWithValueBubble";
+import SliderWithPopup from "./Components/SliderWithPopup";
+import InputRangeSlider from "./Components/InputRangeSlider";
 
 function App(props) {
     const [state, setState] = useState({
         value: 0,
     })
     return (
-        <div className="App">
+        <div>
             <h1>Range Sample</h1>
             {/*<Input/>*/}
 
-            <CustomInput />
+            {/*<CustomInput />*/}
 
             <div>
                 {/*<CustomizedSlider/>*/}
 
 
             </div>
+
+
+            {/*<ReactSliderWithValueBubble/>*/}
+
+            {/*<SliderWithPopup/>*/}
+
+            <InputRangeSlider/>
         </div>
     );
 }

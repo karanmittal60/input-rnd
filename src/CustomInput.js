@@ -52,14 +52,14 @@ function CustomInput() {
         });
 
         // code for tooltip
-        console.log("==event ==", event);
+        // console.log("==event ==", event);
         let {max, min,clientWidth} = event.target
-        console.log("==max, min, value==", max, min, value, clientWidth);
+        // console.log("==max, min, value==", max, min, value, clientWidth);
 
         var range = max - min;
 
         var position = ((value - min) / range) * 100;
-
+        //
         console.log("==range==", range);
         console.log("==position==", position);
 
@@ -74,6 +74,24 @@ function CustomInput() {
         console.log("==pos==", pos);
         document.getElementById("output").style.left = pos;
         /*code for tooltip end here */
+
+        /*css tricks*/
+        // let newPoint = (value - min) / (max - min);
+        // console.log("==newpoint===", newPoint);
+        // let  offset = -1.3;
+        //
+        // let newPlace = 0;
+        // if (newPoint < 0) {
+        //     newPlace = 0;
+        // } else if (newPoint > 1) {
+        //     newPlace = clientWidth;
+        // }else {
+        //     newPlace = clientWidth * newPoint + offset; offset -= newPoint;
+        // }
+        //
+        // document.getElementById("output").style.left = newPlace;
+        // document.getElementById("output").style.marginLeft = offset + "%";
+
     };
 
     const onMouseOver = (event) => {
@@ -93,9 +111,9 @@ function CustomInput() {
                 <input id="seekslider"
                        type="range"
                        min="0"
-                       max="500"
+                       max="100"
                        value={state.value}
-                       step="50"
+                       step="1"
                        style={{width:"300px"}}
                        title={state.hoverValue}
                        onChange={onChangeRange}
